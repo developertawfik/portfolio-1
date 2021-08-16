@@ -34,19 +34,33 @@ a {
     color          : #000000;
 }
 
-/* Menu bar css */
-.menu {
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #66b151b4;
+}
+/* side_menu bar css */
+.side_menu {
     width           : 65px;
     height          : 100vh;
     background-color: #ffffff;
     position        : fixed;
 }
 
-.menu .logo {
+.side_menu .logo {
     background-color: var(--main-color);
 }
 
-.menu .logo a img {
+.side_menu .logo a img {
     width          : 80%;
     padding        : 10px 5px;
     display        : flex;
@@ -55,7 +69,7 @@ a {
     margin         : auto;
 }
 
-.menu .list ul li a {
+.side_menu .menu_list ul li {
     display        : flex;
     position       : relative;
     justify-content: center;
@@ -63,20 +77,21 @@ a {
     margin-top     : 4vh;
 }
 
-.menu .list ul li a i {
+.side_menu .menu_list ul li i {
     display        : flex;
     justify-content: center;
     align-items    : center;
     padding        : 10px;
+    cursor         : pointer;
 }
 
-.menu .list ul li a i:hover {
+.side_menu .menu_list ul li i:hover {
     color     : var(--main-color);
     transition: all .3s;
 
 }
 
-.menu .list ul li a span {
+.side_menu .menu_list ul li span {
     position                : absolute;
     left                    : 68px;
     background-color        : var(--main-color);
@@ -98,7 +113,7 @@ a {
     color                   : white;
 }
 
-.menu .list ul li a:hover span {
+.side_menu .menu_list ul li:hover span {
     opacity   : 1;
     visibility: visible;
     left      : 75px;
@@ -171,7 +186,7 @@ a {
 
 /* Home section css */
 
-section#home {
+section.home {
     margin-left    : 65px;
     display        : flex;
     justify-content: center;
@@ -209,12 +224,12 @@ section#home {
 
 
 .left_side .l_contant h1 {
-    font-size: 60px;
+    font-size     : 60px;
     text-transform: uppercase;
-    line-height: 75px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    font-family: var(--Oswald);
+    line-height   : 75px;
+    font-weight   : 700;
+    margin-bottom : 20px;
+    font-family   : var(--Oswald);
 }
 
 .left_side .l_contant h1 span {
@@ -222,10 +237,9 @@ section#home {
 }
 
 .right_side img {
-    width: 87%;
-    margin: auto;
+    width  : 87%;
+    margin : auto;
     display: flex;
-    margin-top: 80px;
 }
 
 .left_side .l_contant h6 {
@@ -254,7 +268,7 @@ section#home {
     color      : white;
     z-index    : 999;
     font-weight: 700;
-    transition: all .5s;
+    transition : all .5s;
 }
 
 .left_side .l_contant button:hover a {
@@ -309,4 +323,95 @@ section#home {
     background: var(--main-color);
     clip-path : polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     z-index   : -999;
+}
+
+li.btn.active {
+    color: var(--main-color);
+}
+
+/* contant show hide */
+section.page {
+    opacity: 0;
+    position: absolute;
+    top: -1213px;
+    transition: all .5s;
+    visibility: hidden;
+    margin-left: 65px;
+    display: flex;
+    padding: 0px 100px;
+}
+section.page.active {
+    top       : 0px;
+    opacity   : 1;
+    visibility: visible;
+    position  : relative;
+}
+
+
+
+.left_side {
+    position: absolute;
+    left: 98px;
+    width: 55%;
+    z-index: -999;
+}
+
+.right_side {
+    position: absolute;
+    right   : 0;
+    top     : 25vh;
+    width   : 40%;
+}
+
+/* portfolio css */
+.p_title h1 {
+    padding-top: 35px;
+    font-size  : 39px;
+    color      : #1b1b1b;
+}
+
+.all_item {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+}
+
+.all_item .p_item {
+    width              : 47%;
+    height             : 366px;
+    margin-right       : 23px;
+    background         : black;
+    box-shadow         : 5px 6px 33px -9px rgb(0 0 0 / 76%);
+    background-position: top;
+    margin-bottom      : 69px;
+    transition         : ease-in-out 5s;
+    cursor: grab;
+}
+
+section.portfolio.page {
+    display: inherit;
+}
+
+.all_item .p_item.itemMain1 {
+    background     : url(../img/portfolio1.png);
+    background-size: cover;
+}
+
+.all_item .p_item.itemMain2 {
+    background     : url(../img/portfolio2.png);
+    background-size: cover;
+}
+
+.all_item .p_item.itemMain3 {
+    background     : url(../img/portfolio3.png);
+    background-size: cover;
+}
+
+.all_item .p_item.itemMain4 {
+    background     : url(../img/portfolio4.png);
+    background-size: cover;
+}
+
+.all_item .p_item:hover {
+    background-position: bottom;
 }

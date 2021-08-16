@@ -14,34 +14,34 @@
 
 <body>
     <!-- Main Menu -->
-    <section class="menu">
+    <section class="side_menu">
         <div class="logo">
             <a href="">
                 <img src="img/logo.png" alt="">
             </a>
         </div>
-        <div class="list">
-            <ul>
-                <li>
-                    <a href=""><i class="fa fa-home"></i> <span>Home</span></a> 
+        <div class="menu_list">
+            <ul id="myDIV">
+                <li class="homeBtn btn active">
+                    <i class="fa fa-home"></i> <span>Home</span>
                 </li>
-                <li>
-                    <a href=""><i class="fa fa-briefcase"> </i> <span>Portfolio</span> </a>
+                <li class="btn portfolioBtn">
+                    <i class="fa fa-briefcase"> </i> <span>Portfolio</span>
                 </li>
-                <li>
-                    <a href=""><i class="fa fa-address-book-o"></i> <span>About</span></a>
+                <li class="btn aboutBtn">
+                    <i class="fa fa-address-book-o"></i> <span>About</span>
                 </li>
-                <li>
-                    <a href=""><i class="fas fa-table"></i> <span>Resume</span></a>
+                <li class="btn resumeBtn">
+                    <i class="fas fa-table"></i> <span>Resume</span>
                 </li>
-                <li>
-                    <a href=""><i class="fa fa-th"></i> <span>Services</span></a>
+                <li class="btn serviceBtn">
+                    <i class="fa fa-th"></i> <span>Services</span>
                 </li>
-                <li>
-                    <a href=""><i class="fab fa-blogger-b"></i> <span>Blog</span></a>
+                <li class="btn blogBtn">
+                    <i class="fab fa-blogger-b"></i> <span>Blog</span>
                 </li>
-                <li>
-                    <a href=""><i class="fa fa-phone"></i> <span>Contact</span></a>
+                <li class="btn contactBtn">
+                    <i class="fa fa-phone"></i> <span>Contact</span>
                 </li>
             </ul>
         </div>
@@ -55,7 +55,12 @@
             </div>
         </div>
     </section>
-    <section id="home">
+
+
+
+
+
+    <section class="home active page">
         <div class="left_side">
             <div class="time">
                 <span>05 May, 2021</span>
@@ -68,10 +73,48 @@
             </div>
         </div>
         <div class="right_side">
-            
             <img src="img/home.svg" alt="">
         </div>
     </section>
+
+    <section class="portfolio page">
+        <div class="p_title">
+            <h1>My Portfolios</h1>
+        </div>
+        <br>
+        <div class="all_item">
+            <div class="p_item itemMain1">
+
+            </div>
+            <div class="p_item itemMain2">
+
+            </div>
+            <div class="p_item itemMain3">
+
+            </div>
+            <div class="p_item itemMain4">
+
+            </div>
+        </div>
+    </section>
+    <section class="about page">
+
+    </section>
+    <section class="resume page">
+
+    </section>
+    <section class="services page">
+
+    </section>
+    <section class="blog page">
+
+    </section>
+    <section class="contact page">
+
+    </section>
+
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>
