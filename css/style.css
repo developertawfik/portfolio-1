@@ -341,12 +341,12 @@ section.page {
     padding: 0px 100px;
 }
 section.page.active {
-    top       : 0px;
-    opacity   : 1;
+    top: 0px;
+    opacity: 1;
     visibility: visible;
-    position  : relative;
+    position: relative;
+    z-index: 1;
 }
-
 
 
 .left_side {
